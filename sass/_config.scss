@@ -1,0 +1,53 @@
+// ======================================================================
+// Geraldine by James Steel - www.jamessteel.co.uk
+// ======================================================================
+
+// ======================================================================
+// Config
+// ======================================================================
+
+$pesticide-debug: false;
+
+// Colors
+
+$bright: 	#fefefe;
+$light: 	#ecf0f1;
+$dark: 		#666;
+
+$primary: 	#111;
+$secondary: #2c3e50;
+$tertiary: 	#8e44ad;
+
+// Weights
+
+$ultralight: 	100;
+$thin: 			200;
+$light: 		300;
+$regular: 		400;
+$semibold: 		500;
+$bold: 			600;
+$extrabold: 	700;
+$heavy: 		800;
+$ultraheavy: 	900;
+
+// Smoothing
+
+$webkit-smoothing: antialiased;
+
+// Fonts
+
+$global-font-size: 		1rem;
+$global-line-height: 	1.45;
+$global-font-stack: 	$sgillsans;
+$global-font-weight: 	$ultralight;
+$global-font-color: 	$dark;
+
+// Headings
+
+$global-heading-color: 	$primary;
+$global-heading-weight: $regular;
+
+// Links
+
+$link: #222;
+$link-hover: #e74c3c;

@@ -1,0 +1,275 @@
+// ======================================================================
+// Geraldine by James Steel - www.jamessteel.co.uk
+// ======================================================================
+
+// ======================================================================
+// Engine Parts
+// ======================================================================
+
+@import "partials/libs/normalize";
+@import "partials/libs/grid";
+@import "partials/libs/stacks";
+@import "partials/libs/type";
+
+// ======================================================================
+// Debug
+// ======================================================================
+
+@import "partials/libs/pesticide";
+
+// ======================================================================
+// Vars
+// ======================================================================
+
+$total_columns: 12;
+$total_width: 100%;
+$gutter_width: 3%;
+$container_margin: 2%;
+
+$class_container: "row";
+$class_column: "col";
+$class_push: "push";
+
+// ======================================================================
+// Design
+// ======================================================================
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    display: table-row;
+    height: 1px;
+    .row {
+        @include container;
+        padding: 0.5rem 0 1rem 0;
+        overflow: hidden;
+        font-size: 14px;
+    }
+    .copy {
+        float: left;
+        width: 50%;
+    }
+    .love {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+    span {
+        color: #e74c3c;
+    }
+}
+
+// ======================================================================
+// Categories
+// ======================================================================
+
+$container_margin: 0%;
+$gutter_width: 5%;
+
+.categories {
+    overflow: hidden;
+    @include container;
+    background-color: #e74c3c;
+	margin-bottom: 1%;
+    padding: 6% 0 4% 0;
+    a {
+        display: inline-block;
+        border-bottom: solid 1px #eee;
+        text-decoration: none;
+        width: 100%;
+		padding: 0 0 1rem 0;
+        margin: 0;
+        font-weight: $bold;
+        color: #eee;
+    }
+    a:hover {
+        border-bottom: solid 1px #222;
+        color: #222;
+    }
+    .active {
+        color: #e74c3c;
+    }
+    ul {
+        list-style: none;
+        padding: 0 0 0 0;
+        margin: 0 2% 0 2%;
+        li {
+            @include column(12);
+        
+                     }
+        @include generate_grid_positions(li, 12);
+    }
+}
+$gutter_width: 3%;
+@media screen and (min-width: 568px) {
+    .categories {
+    padding: 4% 0 2% 0;
+        ul {
+            li {
+                @include column(4);
+                @include push(0);
+               
+            }
+            @include generate_grid_positions(li, 4);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .categories {
+    padding: 2% 0 0 0;
+        ul {
+            li {
+                @include column(3);
+                @include push(0);
+              
+            }
+            @include generate_grid_positions(li, 3);
+        }
+    }
+}
+
+$container_margin: 2%;
+$gutter_width: 1%;
+// ======================================================================
+// Page
+// ======================================================================
+
+.wrap {max-width: 768px; margin: 0 auto}
+
+header {
+    padding: 3rem 0 3rem 0;
+    @include container;
+    overflow: hidden;
+    .logo {clear: both;
+        @include column(12); text-align: center; padding: 0 0 5rem 0;
+        
+
+        
+        font-size: 2.25rem;
+        color: #e74c3c;
+        a {color: #e74c3c;}
+    }
+    
+    .search {
+     @include column(8);@include push(2);clear: both;
+     
+     
+ 
+   @media screen and (min-width: 568px) {
+        @include column(4);@include push(4);clear: both;
+       } 
+       
+
+    
+       
+    label {background-color: #eee;
+    display: block;
+    
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: $semibold;
+    float: left;
+}
+        
+		input {border:none; border-bottom: 1px solid #eee; outline: none; width: 76%; float: right;margin: 8px 0 0 0;}
+	    
+    }
+    
+}
+
+.home {
+    @include container;
+    padding: 0 0 0 0;
+    overflow: hidden;
+    
+    img {width: 100%; height: auto}
+    
+    article {
+        @include column(12);
+        clear: both;
+    }
+    @media screen and (min-width: 568px) {
+        article {
+            @include column(8); @include push(2);
+        }
+        //@include generate_grid_positions(article, 6);
+    }
+ 
+
+}
+
+.article-nav { @include container;
+	padding: 6% 0 6% 0;
+	
+	overflow: hidden;
+	.previous{@include column(1); a {float:left}}	
+	.next {@include column(1);@include push(11); a {float:right}}	 	
+	
+a {
+    background-color: #eee;
+    display: block;
+    
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: $semibold;
+    
+    &:hover {
+		background-color: #e74c3c;
+		color: #fff;
+		text-decoration: none; 
+	    
+    }
+    
+  }
+
+
+	
+}
+
+// ======================================================================
+// Single
+// ======================================================================
+$gutter_width: 4%;
+.article {
+    @include container;
+    padding: 0 0 0 0;
+    overflow: hidden;
+   
+    article {
+    h1 {text-align: center;}
+    img {width: 100%; height: auto; margin: 0 0 0 0;}
+        @include column(12);clear: both;
+       
+    }
+
+
+    .copy {
+        @include column(12);clear: both;
+
+        img {width: 100%; height: auto; margin: 0 0 0 0;}
+    }
+    
+    @media screen and (min-width: 568px) {
+        .copy {   clear: both;
+            @include column(8);  @include push(2);
+            img {margin: 0rem 0 0 0;}
+        }
+        
+    }
+   
+}
