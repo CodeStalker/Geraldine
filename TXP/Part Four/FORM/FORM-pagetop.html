@@ -12,37 +12,38 @@
     <!-- RWD Viewport -->
     <meta name="viewport" content="width=device-width">
 
-<!-- Title -->
-<txp:if_search_results>
+	<!-- Title -->
+	<txp:if_search_results>
+	
+	<!-- Search Results Title -->
+	<title><txp:site_name /> | Search Results</title>
+	
+	<txp:else />
+	
+	<txp:if_category>
+	<!-- Category List Title -->
+	<title><txp:site_name /> | <txp:category title="1" /></title>
+	
+	<txp:else />
+	
+	</txp:if_category> 
+	
+	
+	</txp:if_search_results>  
+	
 
-<!-- Search Results Title -->
-<title><txp:site_name /> | Search Results</title>
+	<txp:if_individual_article>
+	<!-- Individual Post's -->
+	<title><txp:site_name /> | <txp:title/> </title>
+	
+	<txp:else />
+	
+	<!-- Any other page -->
+	<title><txp:site_name /> | Welcome</title>
+	
+	</txp:if_individual_article>
 
-<txp:else />
 
-<!-- Category List Title -->	
-<txp:if_category>
-
-<title><txp:site_name /> | <txp:category title="1" /></title>
-
-<txp:else />
-
-
-<txp:if_individual_article>
-<!-- Individual Post's -->
-<title><txp:site_name /> | <txp:title/> </title>
-
-<txp:else />
-
-<!-- Any other page -->
-<title><txp:site_name /> | Welcome</title>
-
-</txp:if_individual_article>
-
-</txp:if_category>  
-</txp:if_search_results>    
-    
-    
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.ico">
