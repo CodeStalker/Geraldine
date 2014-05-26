@@ -1,0 +1,21 @@
+<article>
+
+<!-- Creates a link to the article in a header with the articles title in it -->
+<h1><txp:permlink><txp:title /></txp:permlink></h1>
+
+<!-- We need to check if an article image has been assigned and if so... -->
+<txp:if_article_image>
+
+	<!-- Similar to above, this time we wrap an article link around the article image. -->
+	<txp:permlink><txp:article_image /></txp:permlink>
+
+</txp:if_article_image>
+
+	<!-- Generate a brief summary of the article -->
+	<txp:excerpt />
+
+<div class="postdata">
+<p>Written <txp:posted /> in <txp:category1 link="1" title="1" /> <txp:category2 link="1" title="1" /></p>
+</div>
+
+</article>
