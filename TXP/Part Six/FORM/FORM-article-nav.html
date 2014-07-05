@@ -1,0 +1,24 @@
+<!-- Article Nav -->
+<txp:if_article_list>
+	<!-- Article List Nav -->
+	<div class="article-nav">
+	    <div class="previous">
+	        <txp:older>P</txp:older>
+	    </div>
+	
+	    <div class="next">
+	        <txp:newer>N</txp:newer>
+	    </div>
+	</div>
+<txp:else />
+	<!-- Single Article Nav -->
+	<div class="article-nav">
+	    <div class="previous">
+	        <txp:link_to_prev>P</txp:link_to_prev>
+	    </div>
+	
+	    <div class="next">
+	        <txp:link_to_next>N</txp:link_to_next>
+	    </div>
+	</div>
+</txp:if_article_list>

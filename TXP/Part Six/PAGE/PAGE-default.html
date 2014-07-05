@@ -1,0 +1,31 @@
+<txp:output_form form="pagetop"/>
+
+<body>
+
+    <div class="wrap">
+        
+        <!-- Header -->
+        <txp:output_form form="header"/>
+
+		<!-- Article Nav -->
+        <txp:output_form form="article-nav"/>
+
+
+		<!-- List of all articles -->
+        <section class="home">
+            
+		<txp:article listform="list" form="default" limit="3" pageby="3" />
+
+        </section>
+
+		<!-- Article Nav -->
+        <txp:output_form form="article-nav"/>
+        
+        
+    </div>
+
+    <!-- Footer & Copyright -->
+	<txp:output_form form="footer"/>
+    
+</body>
+</html>

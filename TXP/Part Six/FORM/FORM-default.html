@@ -1,0 +1,21 @@
+<article>
+
+<h1><txp:title/></h1>
+
+<txp:if_article_image>
+<aside class="image">
+<txp:article_image />
+<txp:if_custom_field name="article_image">
+<txp:images id='<txp:custom_field name="article_image" />'>
+<p><small> <txp:image_info type="caption" wraptag="" /></small></p>
+</txp:images>
+</txp:if_custom_field>	
+</aside>
+</txp:if_article_image>
+
+<div class="copy">
+<txp:body/>
+<p>Written <txp:posted /> in <txp:category1 link="1" title="1" /> <txp:category2 link="1" title="1" /></p>
+</div>
+
+</article>
