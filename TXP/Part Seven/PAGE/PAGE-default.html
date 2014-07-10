@@ -1,0 +1,47 @@
+<txp:output_form form="pagetop"/>
+
+<body>
+
+    <div class="wrap">
+        
+        <!-- Header -->
+        <txp:output_form form="header"/>
+
+		<!-- Article Nav -->
+        <txp:output_form form="article-nav"/>
+
+
+		<!-- List of all articles -->
+        <section class="home">
+            
+		
+		
+		<txp:if_search>
+			<txp:article pgonly="1" limit="3" />
+			
+				<txp:if_search_results>
+					<h1>Findings for <strong><txp:search_term /></strong></h1>
+						<txp:article limit="3" searchform="search_results" />
+					<txp:else />
+					<h1><strong><txp:search_term /></strong> found nowt. Try again.</h1>
+				</txp:if_search_results>
+				
+		<txp:else/>
+			<txp:article listform="list" form="default" limit="3" pageby="3" />
+		</txp:if_search>		
+		
+		
+
+        </section>
+
+		<!-- Article Nav -->
+        <txp:output_form form="article-nav"/>
+        
+        
+    </div>
+
+    <!-- Footer & Copyright -->
+	<txp:output_form form="footer"/>
+    
+</body>
+</html>

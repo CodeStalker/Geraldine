@@ -1,0 +1,37 @@
+	<footer>
+
+		<div class="categories">       
+		
+		<!-- Generate a list of all the article categories. -->
+		<txp:category_list wraptag="ul" break="">
+		
+		<!-- This generates a current class on the category currently being viewed -->
+		<!-- Useful for coloring it differently so that users can tell what category they are in -->
+		<li <txp:if_category name='<txp:category />'> class="current"</txp:if_category>>
+		<!-- Generate a link to the category. When clicked, these will show only articles in that category -->
+		<txp:category title="1" link="1" />
+		</li>
+		
+		</txp:category_list>
+		
+		</div>
+
+		<!-- Copyright Information -->
+        <div class="row">
+            <div class="copy">
+                &copy; 2014
+            </div>
+
+            <div class="love">
+                made with <span>&hearts;</span> by <a href="http://www.jamessteel.co.uk">James</a>
+            </div>
+        </div>
+        
+        
+    </footer>
+    
+    <!-- Scripts -->
+    
+    <script type="text/javascript">
+		head.load("/assets/css/site.css", function() {});
+    </script>
